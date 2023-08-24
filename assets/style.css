@@ -1,0 +1,73 @@
+/* CSS Variables */
+:root {
+    --background-color: #172a3a;
+    --primary-color: #508991;
+    --secondary-color: #75dddd;
+    --highlight-color: #f5a623;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 10px;
+}
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: white;
+}
+
+/* Snippet Grid */
+.snippet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.snippet-card {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.snippet-card:hover {
+    transform: scale(1.05);
+}
+
+.snippet {
+    user-select: all;
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .snippet-card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .snippet-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .snippet-card {
+        width: 100%;
+    }
+}
